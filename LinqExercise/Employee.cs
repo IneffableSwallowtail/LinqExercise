@@ -30,11 +30,18 @@ namespace LinqExercise
         {
             
         }
-        public static void PrintFullNames(List<Employee> employees)
+        public static void PrintNames(List<Employee> employees)
         {
-            foreach (Employee employee in employees)
+            foreach (var employee in employees)
             {
                 Console.WriteLine($"{employee.FirstName} {employee.LastName}");
+            }
+        }
+        public static void PrintNamesAndAge(List<Employee> employees)
+        {
+            foreach (var employee in employees)
+            {
+                Console.WriteLine($"{employee.FirstName} {employee.LastName}, {employee.Age}");
             }
         }
     }
