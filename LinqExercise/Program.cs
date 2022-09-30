@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 namespace LinqExercise
 {
     class Program
@@ -21,10 +20,15 @@ namespace LinqExercise
              */
 
             //TODO: Print the Sum of numbers
+            Console.WriteLine($"Sum: {numbers.Sum()}\n");
 
             //TODO: Print the Average of numbers
+            Console.WriteLine($"Average: {numbers.Average()}\n");
 
             //TODO: Order numbers in ascending order and print to the console
+            var ordered = numbers.OrderBy(x => x).ToList();
+            Console.Write("Ordered: ");
+            Methods.PrintCommaed(ordered);
 
             //TODO: Order numbers in decsending order adn print to the console
 
