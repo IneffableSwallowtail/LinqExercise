@@ -48,9 +48,6 @@ namespace LinqExercise
             Methods.PrintCommaed(fourInts);
 
             //TODO: Change the value at index 4 to your age, then print the numbers in decsending order
-            Console.Write("Numbers: ");
-            List<int> numberList = numbers.ToList();
-            Methods.PrintCommaed(numberList);
             int[] intsWithAge = new int[10];
             Array.Copy(numbers, intsWithAge, 10);
             intsWithAge[4] = 32;
@@ -61,7 +58,10 @@ namespace LinqExercise
             // List of employees ****Do not remove this****
             var employees = CreateEmployees();
 
-            //TODO: Print all the employees' FullName properties to the console only if their FirstName starts with a C OR an S and order this in acesnding order by FirstName.
+            //TODO: Print all the employees' FullName properties to the console only if their FirstName starts with a C OR an S and order this in ascending order by FirstName.
+            var employeesC_S = employees.Where(x => x.FirstName[0] == 'C' || x.FirstName[0] == 'S').OrderBy(x => x.FirstName).ToList();
+            Console.WriteLine("\nNames of employees that start with a C or an S:");
+            Employee.PrintFullNames(employeesC_S);
 
             //TODO: Print all the employees' FullName and Age who are over the age 26 to the console and order this by Age first and then by FirstName in the same result.
 
