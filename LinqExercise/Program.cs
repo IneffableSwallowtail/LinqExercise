@@ -41,6 +41,9 @@ namespace LinqExercise
             Methods.PrintCommaed(aboveSix);
 
             //TODO: Order numbers in any order (acsending or desc) but only print 4 of them **foreach loop only!**
+            var fourInts = numbers.OrderBy(x => x).Take(4).ToList();
+            Console.Write("\nFour integers: ");
+            Methods.PrintCommaed(fourInts);
 
             //TODO: Change the value at index 4 to your age, then print the numbers in decsending order
 
