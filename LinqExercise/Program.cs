@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+
 namespace LinqExercise
 {
     class Program
@@ -46,6 +48,15 @@ namespace LinqExercise
             Methods.PrintCommaed(fourInts);
 
             //TODO: Change the value at index 4 to your age, then print the numbers in decsending order
+            Console.Write("Numbers: ");
+            List<int> numberList = numbers.ToList();
+            Methods.PrintCommaed(numberList);
+            int[] intsWithAge = new int[10];
+            Array.Copy(numbers, intsWithAge, 10);
+            intsWithAge[4] = 32;
+            var ageAndNumbers = intsWithAge.OrderByDescending(x => x).ToList();
+            Console.Write("\nAge and integers in descending order: ");
+            Methods.PrintCommaed(ageAndNumbers);
 
             // List of employees ****Do not remove this****
             var employees = CreateEmployees();
