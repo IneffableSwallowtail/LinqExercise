@@ -36,6 +36,9 @@ namespace LinqExercise
             Methods.PrintCommaed(orderedDescending);
 
             //TODO: Print to the console only the numbers greater than 6
+            var aboveSix = numbers.Where(x => x > 6).ToList();
+            Console.Write("\nIntegers above six: ");
+            Methods.PrintCommaed(aboveSix);
 
             //TODO: Order numbers in any order (acsending or desc) but only print 4 of them **foreach loop only!**
 
