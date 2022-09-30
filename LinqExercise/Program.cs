@@ -30,7 +30,10 @@ namespace LinqExercise
             Console.Write("Ordered: ");
             Methods.PrintCommaed(ordered);
 
-            //TODO: Order numbers in decsending order adn print to the console
+            //TODO: Order numbers in decsending order and print to the console
+            var orderedDescending = numbers.OrderByDescending(x => x).ToList();
+            Console.Write("\nOrdered by descending: ");
+            Methods.PrintCommaed(orderedDescending);
 
             //TODO: Print to the console only the numbers greater than 6
 
