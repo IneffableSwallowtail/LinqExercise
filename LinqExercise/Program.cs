@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 
 namespace LinqExercise
 {
@@ -76,7 +77,10 @@ namespace LinqExercise
             Console.WriteLine($"Average of these employees' experience: {sum / empsToSum.Count}");
 
             //TODO: Add an employee to the end of the list without using employees.Add()
-
+            Employee newGuy = new Employee("Sev", "Wallace", 20, 0);
+            employees = employees.Append(newGuy).ToList();
+            Console.WriteLine("\nHere is the updated list: ");
+            Employee.PrintNamesAndAge(employees);
 
             Console.WriteLine();
 
